@@ -39,14 +39,13 @@
     - &hba1c=5.4 (Normal)
     - &hba1c=5.9 (Prediabetic)
     - &hba1c=9 (Diabetic)
-- insert pics 1-3
 ![GCPBrowserNormal](images/pic1.png)
 ![GCPBrowserPrediabetic](images/pic2.png)
 ![GCPBrowserDiabetic](images/pic3.png)
 
 ### GCP Google Colab Code
 - To perform a similar action using Google Colab, copy and past the code found in gcp/colab_code. These functions work with both GET and POST requests. 
-- Below are screenshots of requests for normal and diabetic values 
+- Below are screenshots of requests for normal and abnormal (diabetic) values 
 - ![GCPNormal](images/pic4.png)
 - ![GCPAbnormal](images/pic5.png)
 
@@ -89,8 +88,8 @@
 - ![AzureBrowserAbnormal](images/pic12.png)
 
 ### Azure Google Colab Code
-- To perform a similar action using Google Colab, copy and past the code found in gcp/colab_code. These functions work with both GET and POST requests. 
-- Below are screenshots of requests for normal and diabetic values
+- To perform a similar action using Google Colab, copy and past the code found in azure/colab_code. These functions work with both GET and POST requests. 
+- Below are screenshots of requests for normal and abnormal (diabetic) values
 - ![AzureNormal](images/pic13.png)
 - ![AzureAbnormal](images/pic14.png)
 
@@ -107,17 +106,4 @@
 
 
 ## Cloud Comparison
-- Overall, the deployment process between GCP and Azure was simple and straightforward. 
-
-
-### Google Cloud Platform:
-- Easier initial setup with straightforward inline editor
-- Deployment process felt more streamlined
-
-### Microsoft Azure:
-- Start times were a bit longer (~3-4 seconds)
-- Application Insights integration was nice for monitoring
-
-### Overall Pick:
-- I personally perfered using GCP in this assignment, it's interface is easier to navigate and I feel that it was easier to use in general compared to Azure. 
-
+Overall, the deployment process between GCP and Azure was simple and straightforward. Finding the "log" summary was easier on GCP, as "logs" are called "Invocations" on Azure. Deployment times between both platforms were similar, a bit faster on GCP. While I personally prefer GCP, testing query parameters on Azure was easier. The interface of cloud shell on GCP can be a bit intimidating, Azure's query parameter test is much easier to navigate, it's also faster. The set-up process is simpler on GCP, there are more fields to select and pick through on Azure. In conclusion, I personally prefer GCP due to its simple and minimalistic interface but Azure is still a great platform, the differences mainly lie in their layouts. 
