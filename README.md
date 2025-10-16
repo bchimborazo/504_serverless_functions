@@ -34,21 +34,22 @@
 - Click "Save and Redeploy"
 - Click on the generated URL
 - This URL will open a new tab in your browser and say: {"error": "'hba1c' is required."}
--   This message is telling us to enter a hba1c value in order to produce a result, to do this add a question mark (?) to the end of the URL followed by your parameter and a value
+    - This message is telling us to enter a hba1c value in order to produce a result, to do this add a question mark (?) to the end of the URL followed by your parameter and a value
 - Below are examples of normal, prediabetic and diabetic HbA1c values
     - &hba1c=5.4 (Normal)
     - &hba1c=5.9 (Prediabetic)
     - &hba1c=9 (Diabetic)
+
 ![GCPBrowserNormal](images/pic1.png)
 ![GCPBrowserPrediabetic](images/pic2.png)
 ![GCPBrowserDiabetic](images/pic3.png)
 
 ### GCP Google Colab Code
 - To perform a similar action using Google Colab, copy and past the code found in gcp/colab_code. These functions work with both GET and POST requests. 
-- Below are screenshots of requests for normal and abnormal (diabetic) values 
+- Below are screenshots of requests for normal, abnormal (diabetic) and missing values 
 - ![GCPNormal](images/pic4.png)
 - ![GCPAbnormal](images/pic5.png)
-
+- ![GCPMissing](images/missing_value_gcp.png)
 ### GCP Query Parameters
 - Click on "Test"
 - Under Query Parameters enter a normal and abnormal value like seen below and click "Test in Cloud Shell"
@@ -75,7 +76,7 @@
     - Select "Create"
 
 ### Azure Code Implementation
-- Once deployed in the inline code editor, copy and paste the code found in: azure/function_app.py
+- Once deployed, in the inline code editor, copy and paste the code found in: azure/function_app.py
 - Click "Get Function URL" and copy and past the "default (Function Key)" into a new browser tab 
 - Upon hitting enter, you'll recieve a message saying: {"error": "'hba1c' is required."}
     - This message is telling us to enter a hba1c value in order to produce a result, to do this, add a question mark (?) to the end of the URL followed by your parameter and a value
@@ -89,9 +90,10 @@
 
 ### Azure Google Colab Code
 - To perform a similar action using Google Colab, copy and past the code found in azure/colab_code. These functions work with both GET and POST requests. 
-- Below are screenshots of requests for normal and abnormal (diabetic) values
+- Below are screenshots of requests for normal, abnormal (diabetic) and missing values 
 - ![AzureNormal](images/pic13.png)
 - ![AzureAbnormal](images/pic14.png)
+- ![AzureMissing](images/missing_value_azure.png)
 
 
 ### Azure Query Parameters
@@ -105,5 +107,5 @@
 - ![AzureAbnormalQueryResult](images/pic18.png)
 
 
-## Cloud Comparison
+## Cloud Comparison (logs, deployment, interface)
 Overall, the deployment process between GCP and Azure was simple and straightforward. Finding the "log" summary was easier on GCP, as "logs" are called "Invocations" on Azure. Deployment times between both platforms were similar, a bit faster on GCP. While I personally prefer GCP, testing query parameters on Azure was easier. The interface of cloud shell on GCP can be a bit intimidating, Azure's query parameter test is much easier to navigate, it's also faster. The set-up process is simpler on GCP, there are more fields to select and pick through on Azure. In conclusion, I personally prefer GCP due to its simple and minimalistic interface but Azure is still a great platform, the differences mainly lie in their layouts. 
