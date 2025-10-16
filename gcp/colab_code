@@ -1,0 +1,57 @@
+# Normal Value
+import requests, json
+
+url = "https://hha503hw3-347306087237.europe-west1.run.app"
+
+# Test with POST
+print("Testing GCP with POST:")
+r = requests.post(url, json={"hba1c": 5.4})
+print(r.status_code, r.json())
+
+# Test with GET
+print("\nTesting GCP with GET:")
+r = requests.get(url, params={"hba1c": 5.4})
+print(r.status_code, r.json())
+
+
+# Prediabetic Value
+import requests, json
+
+url = "https://hha503hw3-347306087237.europe-west1.run.app"
+
+# Test with POST
+print("Testing GCP with POST:")
+r = requests.post(url, json={"hba1c": 6.0})
+print(r.status_code, r.json())
+
+# Test with GET
+print("\nTesting GCP with GET:")
+r = requests.get(url, params={"hba1c": 6.0})
+print(r.status_code, r.json())
+
+
+# Abnormal Value
+import requests, json
+
+url = "https://hha503hw3-347306087237.europe-west1.run.app"
+
+# Test with POST
+print("Testing GCP with POST:")
+r = requests.post(url, json={"hba1c": 7.5})
+print(r.status_code, r.json())
+
+# Test with GET
+print("\nTesting GCP with GET:")
+r = requests.get(url, params={"hba1c": 7.5})
+print(r.status_code, r.json())
+
+
+# Missing Parameter
+import requests, json
+
+url = "https://hha503hw3-347306087237.europe-west1.run.app"
+
+# Test with POST (missing parameter)
+print("Testing GCP Error Handling with POST:")
+r = requests.post(url, json={})
+print(r.status_code, r.json())

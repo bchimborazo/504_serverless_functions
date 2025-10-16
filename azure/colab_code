@@ -1,0 +1,57 @@
+# Normal value
+import requests, json
+
+url = "https://hha504hw3-h5ekhdbkcddwdpf5.canadacentral-01.azurewebsites.net/api/http_trigger1?code=Ep27ETOiUgMit1PGlXNT0l4gR_1WhRPsTWOnaQ-0GIVMAzFufX5wQg=="
+
+# Test with POST
+print("Testing Azure with POST:")
+r = requests.post(url, json={"hba1c": 5.4})
+print(r.status_code, r.json())
+
+# Test with GET
+print("\nTesting Azure with GET:")
+r = requests.get(url, params={"hba1c": 5.4})
+print(r.status_code, r.json())
+
+
+# Prediabetic Value
+import requests, json
+
+url = "https://hha504hw3-h5ekhdbkcddwdpf5.canadacentral-01.azurewebsites.net/api/http_trigger1?code=Ep27ETOiUgMit1PGlXNT0l4gR_1WhRPsTWOnaQ-0GIVMAzFufX5wQg=="
+
+# Test with POST
+print("Testing Azure with POST:")
+r = requests.post(url, json={"hba1c": 6.0})
+print(r.status_code, r.json())
+
+# Test with GET
+print("\nTesting Azure with GET:")
+r = requests.get(url, params={"hba1c": 6.0})
+print(r.status_code, r.json())
+
+
+# Abnormal value
+import requests, json
+
+url = "https://hha504hw3-h5ekhdbkcddwdpf5.canadacentral-01.azurewebsites.net/api/http_trigger1?code=Ep27ETOiUgMit1PGlXNT0l4gR_1WhRPsTWOnaQ-0GIVMAzFufX5wQg=="
+
+# Test with POST
+print("Testing Azure with POST:")
+r = requests.post(url, json={"hba1c": 7.5})
+print(r.status_code, r.json())
+
+# Test with GET
+print("\nTesting Azure with GET:")
+r = requests.get(url, params={"hba1c": 7.5})
+print(r.status_code, r.json())
+
+
+# Missing value
+import requests, json
+
+url = "https://hha504hw3-h5ekhdbkcddwdpf5.canadacentral-01.azurewebsites.net/api/http_trigger1?code=Ep27ETOiUgMit1PGlXNT0l4gR_1WhRPsTWOnaQ-0GIVMAzFufX5wQg=="
+
+# Test with POST (missing parameter)
+print("Testing Azure Error Handling with POST:")
+r = requests.post(url, json={})
+print(r.status_code, r.json())
